@@ -1,0 +1,31 @@
+- Unit 38.1 Hashing and JSON Web Token
+- $ npm install bcrypt
+- const bcrypt = require("bcrypt");
+- JSON Web Tokens
+    - Authentication in Flask
+        - Make request with username/password to login route
+        - Server authenticates and puts user info sessions
+        - Session info is stores in cookies in browser
+        - Session info will resend with every request
+    - Authentication Via Tokens
+        - Makes request with username/password to AJAX login route
+        - Server authenticates and returns token in JSON
+        - Front ent JS receives token and stores via localStorage
+        - browser then sends token in request for future request
+- JSON Web Tokens are made up of 3 string components
+    - header - metadata about token (signing algorithim used and type of token)
+    - payload - data to be stored in token (typically an object)
+    - signature - version of header and payload, signed with a secret key
+- To install
+    - $ npm install jsonwebtoken
+
+__________________________________________---
+- Assignment: Message.ly
+    - app.js - Contains user routes and auth routes
+    - expressError.js - Handles errors
+    - db.js - Contains database
+    - server.js - Starts server
+    - config.js - contais secret key
+    - middleware/auth.js - contains authentication middleware for if user is logged in
+- User model edited and fixed
+- Routes - edited and fixed
